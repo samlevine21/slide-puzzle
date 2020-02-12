@@ -38,17 +38,17 @@ public class PuzzleLogic
     }
     
     public boolean move(int r, int c) {
-        //right
+        //up
         if (r + 1 < ROWS && puz[r + 1][c] == blank)
             swapTiles(r, c, r + 1, c);
-        //left
+        //down
         if (r - 1 >= 0 && puz[r - 1][c] == blank)
             swapTiles(r, c, r - 1, c);
-        //up
+        //right
         if (c + 1 < COLS && puz[r][c + 1] == blank)
             swapTiles(r, c, r, c + 1);
-        //down
-        if (c - 1 < COLS && puz[r][c - 1] == blank)
+        //left
+        if (c - 1 >= 0 && puz[r][c - 1] == blank)
             swapTiles(r, c, r, c - 1);
         return false;
     }
